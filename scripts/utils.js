@@ -1,3 +1,7 @@
+export function sleep(ms) {
+	return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
 export function removeAllChildNodes(parent) {
 	while (parent && parent.firstChild) {
 		parent.removeChild(parent.firstChild);
@@ -12,9 +16,8 @@ export function isGameWon() {
 	return false;
 }
 
-export function setGreen() {
-	const discs = document.querySelectorAll(".column-3 .row");
-	console.log(discs.length);
+export function setGreen(col) {
+	const discs = document.querySelectorAll(`.column-${col} .row`);
 	discs.forEach((disc) => {
 		disc.firstChild.classList.add("won");
 	});

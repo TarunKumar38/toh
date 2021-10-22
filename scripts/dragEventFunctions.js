@@ -36,7 +36,6 @@ function dragDrop(event) {
 	const places = this.childNodes;
 	let i = places.length - 2;
 	for (; i >= 0; i--) {
-		console.log(places[i])
 		if (places[i].firstChild) {
 			continue;
 		} else {
@@ -44,7 +43,6 @@ function dragDrop(event) {
 		}
 	}
 	let discsCount = document.querySelectorAll(".column-1 .row").length;
-	console.log(discsCount)
 	if (i == discsCount - 1) {
 		places[i].appendChild(temp);
 	} else if (i >= 0) {
@@ -58,7 +56,7 @@ function dragDrop(event) {
 	}
 	addDraggableEvent();
 	if (isGameWon()) {
-		setGreen();
+		setGreen(3);
 		setDraggableFalse();
 	}
 }
