@@ -10,7 +10,7 @@ async function toh(n, source, target, aux, ds, discsCount) {
 	move(source, target, ds, discsCount, n);
 	ds[source-1] -= 1;
 	ds[target-1] += 1;
-	await sleep(300);
+	await sleep(600);
 	await toh(n - 1, aux, target, source, ds, discsCount);
 }
 
