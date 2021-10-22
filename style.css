@@ -49,7 +49,8 @@
 }
 
 .rod {
-	background-color: #fda117;
+	/* background-color: #fda117; */
+	background-color: #f9b248;
 	/* height: 300px; */
 	width: 20px;
 	position: absolute;
@@ -88,4 +89,8 @@
 
 .hovered {
 	box-shadow: 10px 10px 0 0 rgba(0, 0, 0, 10%);
+}
+
+.won {
+	background-color: #4E9F3D;
 }
