@@ -1,1 +1,1 @@
-# Tower of Hanoi Project
+# Tower of Hanoi

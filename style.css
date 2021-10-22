@@ -92,5 +92,25 @@
 }
 
 .won {
-	background-color: #4E9F3D;
+	background-color: #4e9f3d;
+}
+
+.controls {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.column-1 .disc {
+	transition: all 0.5s;
+}
+
+.relative {
+	position: relative;
+	transition: all 2s;
+}
+
+.absolute {
+	position: absolute;
 }
