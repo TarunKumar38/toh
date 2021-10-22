@@ -15,27 +15,27 @@ discsInput.addEventListener("input", function (event) {
 });
 
 function addDraggableEventCol(col) {
-	// const discs = document.querySelectorAll(`.column-${col} .row`);
-	// let flag = true;
-	// for (let i = 0; i < discs.length; i++) {
-	// 	if (flag && discs[i].firstChild) {
-	// 		discs[i].firstChild.setAttribute("draggable", "true");
-	// 		flag = false;
-	// 	} else if (discs[i].firstChild) {
-	// 		discs[i].firstChild.setAttribute("draggable", "false");
-	// 	}
-	// }
-
-	const disc = document.querySelectorAll(`.column-${col} .disc`);
-	console.log(disc.length);
-	if (disc.length > 0) {
-		disc[0].setAttribute("draggable", "true");
-	}
-	if(disc.length > 1) {
-		for (let i = 1; i < disc.length; i++) {
-			disc[i].setAttribute("draggable", "false");
+	const discs = document.querySelectorAll(`.column-${col} .row`);
+	let flag = true;
+	for (let i = 0; i < discs.length; i++) {
+		if (flag && discs[i].firstChild) {
+			discs[i].firstChild.setAttribute("draggable", "true");
+			flag = false;
+		} else if (discs[i].firstChild) {
+			discs[i].firstChild.setAttribute("draggable", "false");
 		}
 	}
+
+	// const disc = document.querySelectorAll(`.column-${col} .disc`);
+	// console.log(disc.length);
+	// if (disc.length > 0) {
+	// 	disc[0].setAttribute("draggable", "true");
+	// }
+	// if(disc.length > 1) {
+	// 	for (let i = 1; i < disc.length; i++) {
+	// 		disc[i].setAttribute("draggable", "false");
+	// 	}
+	// }
 }
 
 function addDraggableEvent() {
@@ -168,4 +168,33 @@ function dragDrop(event) {
 		}
 	}
 	addDraggableEvent();
+	if (isGameWon()) {
+		setGreen();
+		setDraggableFalse();
+	}
+}
+
+function isGameWon() {
+	const discs = document.querySelector(".column-3 .row");
+	console.log("c");
+	if (discs && discs.firstChild) {
+		console.log(true);
+		return true;
+	}
+	return false;
+}
+
+function setGreen() {
+	const discs = document.querySelectorAll(".column-3 .row");
+	console.log(discs.length);
+	discs.forEach((disc) => {
+		disc.firstChild.classList.add("won");
+	});
+}
+
+function setDraggableFalse() {
+	const discs = document.querySelectorAll(`.column-3 .row`);
+	for (let i = 0; i < discs.length; i++) {
+		discs[i].firstChild.setAttribute("draggable", "false");
+	}
 }
