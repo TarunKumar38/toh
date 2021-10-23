@@ -8,6 +8,7 @@
 		<title>Project</title>
 	</head>
 	<body>
+		<a href="main.html">back</a>
 		<div class="root">
 			<div class="main-container">
 				<div class="column column-1"></div>
@@ -16,15 +17,19 @@
 			</div>
 			<div class="controls">
 				<div class="difficulty">
-					<label for="discs">Difficulty:</label>
-					<input
-						type="number"
-						name="discs"
-						id="number-of-discs"
-						value="3"
-						max="6"
-						min="3"
-					/>
+					<div class="diff-div">
+						<label for="discs">Difficulty:</label>
+						<input
+							id="number-of-discs"
+							type="range"
+							min="1"
+							max="8"
+						/>
+					</div>
+					<div class="speed-div">
+						<label for="discs">Speed:</label>
+						<input type="range" min="0" max="900" class="speed" />
+					</div>
 				</div>
 				<button class="solve-btn" type="submit">Solve</button>
 			</div>

@@ -1,0 +1,38 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.root {
+	padding: 0 100px;
+}
+
+.heading {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 10rem;
+	font-size: 72px;
+	margin-bottom: 100px;
+}
+
+.container {
+	display: flex;
+	align-items: center;
+}
+
+.content {
+	font-size: 36px;
+	max-width: 60%;
+}
+.rules {
+	font-size: 28px;
+}
+
+.links {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 25%;
+}

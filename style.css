@@ -25,10 +25,10 @@
 	align-items: center;
 	justify-content: space-evenly;
 	height: 100vh;
+	background-color: #e8d5b7;
 }
 
 .main-container {
-	background-color: #e8d5b7;
 	min-height: 450px;
 	width: 1060px;
 	display: flex;
