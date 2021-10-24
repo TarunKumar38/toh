@@ -25,6 +25,7 @@ function addRod(col, discsCount) {
 	rod.classList.add("rod");
 	rod.classList.add(`rod-${col}`);
 	rod.style.height = `${55 * discsCount + 50}px`;
+	column.parentElement.style.height = `${55 * discsCount + 100}px`;
 	column.appendChild(rod);
 }
 
