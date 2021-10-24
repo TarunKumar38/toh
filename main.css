@@ -33,6 +33,7 @@ body {
 	align-items: center;
 	justify-content: space-around;
 	/* background-color: #e8d5b7; */
+	margin-bottom: 100px;
 }
 
 .content {
@@ -40,7 +41,7 @@ body {
 	max-width: 70%;
 }
 .about {
-	margin-bottom: 20px;
+	margin-bottom: 50px;
 }
 .rules-heading {
 	margin-bottom: 10px;
@@ -85,8 +86,8 @@ a:hover {
 }
 
 img {
-	width: 500px;
-	height: 200px;
+	width: 600px;
+	height: 250px;
 	border-radius: 10px;
 	box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 5px, rgba(0, 0, 0, 0.24) 0px 2px 5px;
 }
@@ -95,7 +96,7 @@ img {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	margin-bottom: 50px;
+	margin-bottom: 80px;
 	/* position: absolute; */
 }
 

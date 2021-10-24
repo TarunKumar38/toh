@@ -10,6 +10,7 @@
 			href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap"
 			rel="stylesheet"
 		/>
+
 		<script
 			type="module"
 			src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"
@@ -18,47 +19,87 @@
 			nomodule=""
 			src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"
 		></script>
-
-		<link rel="stylesheet" href="main.css" />
-		<title>Tower of Hanoi</title>
+		<link rel="stylesheet" href="style.css" />
+		<title>Project</title>
 	</head>
 	<body>
 		<div class="heading">TOWER OF HANOI</div>
-
+		<a href="index.html" class="back-icon"
+			><ion-icon class="back" name="arrow-back-circle-outline"></ion-icon
+		></a>
 		<div class="root">
-			<div class="about">
-				Tower of Hanoi is a mathematical puzzle where we have three rods
-				and n disks. The objective of the puzzle is to move the entire
-				stack to another rod, obeying some simple rules.
+			<div class="parent-container">
+				<div class="rod-names">
+					<p>Source</p>
+					<p>Auxilliary</p>
+					<p>Destination</p>
+				</div>
+				<div class="main-container">
+					<div class="column column-1"></div>
+					<div class="column column-2"></div>
+					<div class="column column-3"></div>
+				</div>
 			</div>
+			<div class="controls">
+				<!-- <div class="diff-div"> -->
+				<label for="discs">No. of Disks:</label>
+				<!-- <div> -->
+				<input
+					id="number-of-discs"
+					class="discs"
+					type="range"
+					min="1"
+					value="4"
+					max="8"
+					onchange="diffvalue.value=value"
+				/>
+				<output id="diffvalue">3</output>
+				<!-- </div> -->
+				<!-- </div> -->
+				<!-- <div class="speed-div"> -->
+				<label for="discs">Speed:</label>
+				<!-- <div> -->
+				<input
+					type="range"
+					min="0"
+					max="900"
+					class="speed"
+					onchange="speedvalue.value=1000-parseInt(value)+'ms'"
+				/>
+				<output id="speedvalue">500ms</output>
+				<!-- </div> -->
+				<!-- </div> -->
+
+				<button class="solve-btn" type="submit">Visualize!</button>
+			</div>
+		</div>
+		<div class="approach-container">
+			<h1>Algorithm -></h1>
+			<h3>
+				1. Call the function to move n-1 discs from source to auxilliary
+				using destination.
+			</h3>
 			<div class="img-div">
 				<img src="images/1.png" alt="" />
 				<ion-icon name="arrow-forward-outline"></ion-icon>
+				<img src="images/2.png" alt="" />
+			</div>
+			<h3>2. Move the disk from source to destination.</h3>
+			<div class="img-div">
+				<img src="images/2.png" alt="" />
+				<ion-icon name="arrow-forward-outline"></ion-icon>
+				<img src="images/3.png" alt="" />
+			</div>
+			<h3>
+				3. Call the function again to move n-1 discs from auxilliary to
+				destinatin using source.
+			</h3>
+			<div class="img-div">
+				<img src="images/3.png" alt="" />
+				<ion-icon name="arrow-forward-outline"></ion-icon>
 				<img src="images/4.png" alt="" />
 			</div>
-			<div class="container">
-				<div class="content">
-					<div class="rules-heading">The rules are :-</div>
-					<div class="rules">
-						<ul>
-							<li>Only one disk can be moved at a time.</li>
-							<li>
-								Each move consists of taking the upper disk from
-								one of the stacks and placing it on top of
-								another stack i.e. a disk can only be moved if
-								it is the uppermost disk on a stack.
-							</li>
-							<li>
-								Larger disk may be placed on top of a smaller
-								disk.
-							</li>
-						</ul>
-					</div>
-				</div>
-				<div class="links">
-					<a href="index.html">Start</a>
-				</div>
-			</div>
 		</div>
+		<script type="module" src="./scripts/main.js"></script>
 	</body>
 </html>

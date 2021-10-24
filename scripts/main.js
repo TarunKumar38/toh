@@ -5,7 +5,7 @@ import { sleep, setGreen } from "./utils.js";
 
 const discsInput = document.querySelector("#number-of-discs");
 const speedEl = document.querySelector(".speed");
-let discsCount = 3;
+let discsCount = 4;
 let speed = 500;
 
 //initial configuration
@@ -16,6 +16,11 @@ addEventListeners();
 discsInput.addEventListener("input", function (event) {
 	event.preventDefault();
 	discsCount = event.target.value;
+	speed = speedEl.value;
+	const discs = document.querySelectorAll(".column-1 .disc");
+	discs.forEach((disc) => {
+		disc.style.transition = `all ${(1000 - speed) / 1000}s`;
+	});
 	createStructure(discsCount);
 	addEventListeners();
 });
@@ -23,7 +28,6 @@ discsInput.addEventListener("input", function (event) {
 speedEl.addEventListener("input", function (event) {
 	// console.log(event.target.value);
 	speed = event.target.value;
-	console.log(1000 - speed);
 	const discs = document.querySelectorAll(".column-1 .disc");
 	discs.forEach((disc) => {
 		disc.style.transition = `all ${(1000 - speed) / 1000}s`;
