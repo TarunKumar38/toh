@@ -1,3 +1,100 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
+		<script
+			type="module"
+			src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"
+		></script>
+		<script
+			nomodule=""
+			src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"
+		></script>
+		<link rel="stylesheet" href="style.css" />
+		<title>Tower of Hanoi</title>
+	</head>
+	<body>
+		<div class="heading">TOWER OF HANOI</div>
+		<a href="main.html" class="back-icon"
+			><ion-icon class="back" name="arrow-back-circle-outline"></ion-icon
+		></a>
+		<div class="root">
+			<div class="parent-container">
+				<div class="rod-names">
+					<p>Source</p>
+					<p>Auxilliary</p>
+					<p>Destination</p>
+				</div>
+				<div class="main-container">
+					<div class="column column-1"></div>
+					<div class="column column-2"></div>
+					<div class="column column-3"></div>
+				</div>
+			</div>
+			<div class="controls">
+				<label for="discs">No. of Disks:</label>
+				<input
+					id="number-of-discs"
+					class="discs"
+					type="range"
+					min="1"
+					value="4"
+					max="8"
+					onchange="diffvalue.value=value"
+				/>
+				<output id="diffvalue">3</output>
+				<label for="discs">Speed:</label>
+				<input
+					type="range"
+					min="0"
+					max="900"
+					class="speed"
+					onchange="speedvalue.value=1000-parseInt(value)+'ms'"
+				/>
+				<output id="speedvalue">500ms</output>
+
+				<button class="solve-btn" type="submit">Visualize!</button>
+			</div>
+		</div>
+		<div class="approach-container">
+			<h1>Algorithm -></h1>
+			<h3>
+				1. Call the function to move n-1 discs from source to auxilliary
+				using destination.
+			</h3>
+			<div class="img-div">
+				<img src="images/1.png" alt="" />
+				<ion-icon name="arrow-forward-outline"></ion-icon>
+				<img src="images/2.png" alt="" />
+			</div>
+			<h3>2. Move the disk from source to destination.</h3>
+			<div class="img-div">
+				<img src="images/2.png" alt="" />
+				<ion-icon name="arrow-forward-outline"></ion-icon>
+				<img src="images/3.png" alt="" />
+			</div>
+			<h3>
+				3. Call the function again to move n-1 discs from auxilliary to
+				destinatin using source.
+			</h3>
+			<div class="img-div">
+				<img src="images/3.png" alt="" />
+				<ion-icon name="arrow-forward-outline"></ion-icon>
+				<img src="images/4.png" alt="" />
+			</div>
+		</div>
+		<script type="module" src="./scripts/main.js"></script>
+	</body>
+</html> -->
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -58,7 +155,6 @@
 						</ul>
 					</div>
 				</div>
-				
 			</div>
 		</div>
 	</body>
